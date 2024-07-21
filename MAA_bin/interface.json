@@ -1,0 +1,23 @@
+{
+    "controller": [
+        {
+            "name": "安卓端",
+            "type": "Adb"
+        }
+    ],
+    "resource": [
+        {
+            "name": "官服",
+            "path": [
+                "{PROJECT_DIR}/resource/base"
+            ]
+        }
+    ],
+    "task": [
+        {
+            "name": "萨卡兹存钱",
+            "entry": "萨卡兹存钱"
+        }
+    ],
+    "version": "v0.0.1"
+}

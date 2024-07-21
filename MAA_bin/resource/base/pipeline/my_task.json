@@ -1,0 +1,741 @@
+{
+    "萨卡兹存钱": {
+        "next": [
+            "开始"
+        ]
+    },
+    "开始": {
+        "recognition": "OCR",
+        "expected": "开始探险",
+        "action": "Click",
+        "next": [
+            "选分队"
+        ]
+    },
+    "选分队": {
+        "recognition": "OCR",
+        "expected": "蓝图测绘分队",
+        "action": "Click",
+        "next": [
+            "确认分队"
+        ]
+    },
+    "确认分队": {
+        "recognition": "OCR",
+        "expected": "你确定要这么做",
+        "action": "Click",
+        "next": [
+            "选组合"
+        ]
+    },
+    "选组合": {
+        "recognition": "OCR",
+        "expected": "稳扎稳打",
+        "action": "Click",
+        "next": [
+            "确认组合"
+        ]
+    },
+    "确认组合": {
+        "recognition": "OCR",
+        "expected": "你确定要这么做",
+        "action": "Click",
+        "next": [
+            "招募1"
+        ]
+    },
+    "招募1": {
+        "recognition": "OCR",
+        "expected": "重装招募券",
+        "action": "Click",
+        "next": [
+            "点击放弃1"
+        ]
+    },
+    "点击放弃1": {
+        "recognition": "OCR",
+        "expected": "放弃",
+        "action": "Click",
+        "next": [
+            "确认放弃1"
+        ]
+    },
+    "确认放弃1": {
+        "recognition": "TemplateMatch",
+        "template": "确认放弃图标.png",
+        "threshold": 0.95,
+        "action": "Click",
+        "next": [
+            "招募2"
+        ]
+    },
+    "招募2": {
+        "recognition": "OCR",
+        "expected": "术师招募券",
+        "action": "Click",
+        "next": [
+            "点击放弃2"
+        ]
+    },
+    "点击放弃2": {
+        "recognition": "OCR",
+        "expected": "放弃",
+        "action": "Click",
+        "next": [
+            "确认放弃2"
+        ]
+    },
+    "确认放弃2": {
+        "recognition": "TemplateMatch",
+        "template": "确认放弃图标.png",
+        "threshold": 0.95,
+        "action": "Click",
+        "next": [
+            "招募3"
+        ]
+    },
+   "招募3": {
+        "recognition": "OCR",
+        "expected": "狙击招募券",
+        "action": "Click",
+        "next": [
+            "点击放弃3"
+        ]
+    },
+    "点击放弃3": {
+        "recognition": "OCR",
+        "expected": "放弃",
+        "action": "Click",
+        "next": [
+            "确认放弃3"
+        ]
+    },
+    "确认放弃3": {
+        "recognition": "TemplateMatch",
+        "template": "确认放弃图标.png",
+        "threshold": 0.95,
+        "action": "Click",
+        "next": [
+            "开始讲述"
+        ]
+    },
+    "开始讲述": {
+        "recognition": "OCR",
+        "expected": "开始",
+        "action": "Click",
+        "next": [
+            "点击思绪"
+        ]
+    },
+    "点击思绪": {
+        "recognition": "OCR",
+        "expected": "思绪",
+        "action": "Click",
+        "next": [
+            "点击构想"
+        ]
+    },
+    "点击构想": {
+        "recognition": "OCR",
+        "expected": "印象重建",
+        "action": "Click",
+        "next": [
+            "点击舍弃"
+        ]
+    },
+    "点击舍弃": {
+        "recognition": "TemplateMatch",
+        "template": "舍弃图标.png",
+        "action": "Click",
+        "next": [
+            "点击收起"
+        ]
+    },
+    "点击收起": {
+        "recognition": "OCR",
+        "expected": "收起",
+        "action": "Click",
+        "next": [
+            "点击第一列战斗"
+        ]
+    },
+    "点击第一列战斗": {
+        "recognition": "TemplateMatch",
+        "roi": [0,0,640,720],
+        "template": "战斗图标.png",
+        "threshold": 0.97,
+        "action": "Click",
+        "next": [
+            "点击刷新"
+        ]
+    },
+    "点击刷新": {
+        "recognition": "OCR",
+        "expected": "刷新",
+        "action": "Click",
+        "next": [
+            "刷新次数不足",
+            "点击刷新确定"
+        ]
+    },
+    "刷新次数不足": {
+        "recognition": "OCR",
+        "expected": "该节点的刷新次数",
+        "next": [
+            "点击返回主页"
+        ]
+    },
+    "点击刷新确定": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "action": "Click",
+        "next": [
+            "构想数量不足",
+            "发现不期而遇",
+            "发现战斗",
+            "发现紧急作战"
+        ]
+    },
+    "构想数量不足": {
+        "recognition": "OCR",
+        "expected": "构想数量不足",
+        "next": [
+            "点击返回主页"
+        ]
+    },
+    "发现不期而遇": {
+        "recognition": "TemplateMatch",
+        "roi": [0,0,640,720],
+        "template": "不期而遇图标.png",
+        "threshold": 0.97,
+        "post_delay": 20,
+        "next": [
+            "点击出发前往"
+        ]
+    },
+    "发现战斗": {
+        "recognition": "TemplateMatch",
+        "roi": [0,0,640,720],
+        "template": "战斗图标.png",
+        "threshold": 0.97,
+        "post_delay": 20,
+        "next": [
+            "点击刷新"
+        ]
+    },
+    "发现紧急作战": {
+        "recognition": "TemplateMatch",
+        "roi": [0,0,640,720],
+        "template": "紧急作战图标.png",
+        "threshold": 0.96,
+        "post_delay": 20,
+        "next": [
+            "点击刷新"
+        ]
+    },
+    "点击下一节点": {
+        "next": [
+            "点击不期而遇",
+            "点击战斗",
+            "点击紧急作战",
+            "点击商店"
+        ]
+    },
+    "点击不期而遇": {
+        "recognition": "TemplateMatch",
+        "roi": [640,0,640,720],
+        "template": "不期而遇图标.png",
+        "threshold": 0.97,
+        "action": "Click",
+        "next": [
+            "点击出发前往"
+        ]
+    },
+    "点击战斗": {
+        "recognition": "TemplateMatch",
+        "roi": [640,0,640,720],
+        "template": "战斗图标.png",
+        "threshold": 0.97,
+        "action": "Click",
+        "next": [
+            "点击刷新"
+        ]
+    },
+    "点击紧急作战": {
+        "recognition": "TemplateMatch",
+        "roi": [640,0,640,720],
+        "template": "紧急作战图标.png",
+        "threshold": 0.96,
+        "action": "Click",
+        "next": [
+            "点击刷新"
+        ]
+    },
+    "点击出发前往": {
+        "recognition": "OCR",
+        "expected": "出发前往",
+        "action": "Click",
+        "next":[
+            "相遇",
+            "在故事结束之后",
+            "高空坠物",
+            "解惑",
+            "虫卡兹",
+            "阴魂不散"
+        ]
+    },
+    "相遇": {
+        "recognition": "OCR",
+        "expected": "相遇",
+        "action": "Click",
+        "next": [
+            "相遇1"
+        ]
+    },"相遇1": {
+        "action": "Click",
+        "target": "相遇",
+        "pre_delay": 20,
+        "post_delay": 20,
+        "next": [
+            "相遇选项"
+        ]
+    },
+    "相遇选项": {
+        "recognition": "OCR",
+        "expected": "希望时代",
+        "action": "Click",
+        "next": [
+            "相遇确定"
+        ]
+    },
+    "相遇确定": {
+        "recognition": "OCR",
+        "expected": "确定这么做",
+        "action": "Click",
+        "next": [
+            "相遇2"
+        ]
+    },
+    "相遇2": {
+        "action": "Click",
+        "target": "相遇",
+        "pre_delay": 20,
+        "post_delay": 20,
+        "next": [
+            "相遇3"
+        ]
+    },
+    "相遇3": {
+        "action": "Click",
+        "target": "相遇",
+        "pre_delay": 20,
+        "next": [
+            "点击下一节点"
+        ]
+    },
+    "在故事结束之后": {
+        "recognition": "OCR",
+        "expected": "在故事结束之后",
+        "action": "Click",
+        "next": [
+            "在故事结束之后1"
+        ]
+    },"在故事结束之后1": {
+        "action": "Click",
+        "target": "在故事结束之后",
+        "pre_delay": 20,
+        "post_delay": 20,
+        "next": [
+            "在故事结束之后选项"
+        ]
+    },
+    "在故事结束之后选项": {
+        "recognition": "OCR",
+        "expected": "要去的地方",
+        "action": "Click",
+        "next": [
+            "在故事结束之后确定"
+        ]
+    },
+    "在故事结束之后确定": {
+        "recognition": "OCR",
+        "expected": "确定这么做",
+        "action": "Click",
+        "next": [
+            "在故事结束之后2"
+        ]
+    },
+    "在故事结束之后2": {
+        "action": "Click",
+        "target": "在故事结束之后",
+        "pre_delay": 20,
+        "post_delay": 20,
+        "next": [
+            "在故事结束之后3"
+        ]
+    },
+    "在故事结束之后3": {
+        "action": "Click",
+        "target": "在故事结束之后",
+        "pre_delay": 20,
+        "next": [
+            "点击下一节点"
+        ]
+    },
+    "高空坠物": {
+        "recognition": "OCR",
+        "expected": "高空坠物",
+        "action": "Click",
+        "next": [
+            "高空坠物1"
+        ]
+    },"高空坠物1": {
+        "action": "Click",
+        "target": "高空坠物",
+        "pre_delay": 20,
+        "post_delay": 20,
+        "next": [
+            "高空坠物选项"
+        ]
+    },
+    "高空坠物选项": {
+        "recognition": "OCR",
+        "expected": "希望",
+        "action": "Click",
+        "next": [
+            "高空坠物确定"
+        ]
+    },
+    "高空坠物确定": {
+        "recognition": "OCR",
+        "expected": "确定这么做",
+        "action": "Click",
+        "next": [
+            "高空坠物2"
+        ]
+    },
+    "高空坠物2": {
+        "action": "Click",
+        "target": "高空坠物",
+        "pre_delay": 20,
+        "post_delay": 20,
+        "next": [
+            "高空坠物3"
+        ]
+    },
+    "高空坠物3": {
+        "action": "Click",
+        "target": "高空坠物",
+        "pre_delay": 20,
+        "next": [
+            "点击下一节点"
+        ]
+    },
+    "解惑": {
+        "recognition": "OCR",
+        "expected": "解惑",
+        "action": "Click",
+        "next": [
+            "解惑1"
+        ]
+    },"解惑1": {
+        "action": "Click",
+        "target": "解惑",
+        "pre_delay": 20,
+        "post_delay": 20,
+        "next": [
+            "解惑选项"
+        ]
+    },
+    "解惑选项": {
+        "recognition": "OCR",
+        "expected": "希望",
+        "action": "Click",
+        "next": [
+            "解惑确定"
+        ]
+    },
+    "解惑确定": {
+        "recognition": "OCR",
+        "expected": "确定这么做",
+        "action": "Click",
+        "next": [
+            "解惑2"
+        ]
+    },
+    "解惑2": {
+        "action": "Click",
+        "target": "解惑",
+        "pre_delay": 20,
+        "post_delay": 20,
+        "next": [
+            "解惑3"
+        ]
+    },
+    "解惑3": {
+        "action": "Click",
+        "target": "解惑",
+        "pre_delay": 20,
+        "next": [
+            "点击下一节点"
+        ]
+    },
+    "虫卡兹": {
+        "recognition": "OCR",
+        "expected": "虫卡兹",
+        "action": "Click",
+        "next": [
+            "虫卡兹1"
+        ]
+    },
+    "虫卡兹1": {
+        "action": "Click",
+        "target": "虫卡兹",
+        "pre_delay": 20,
+        "post_delay": 20,
+        "next": [
+            "虫卡兹选项"
+        ]
+    },
+    "虫卡兹选项": {
+        "recognition": "OCR",
+        "expected": "我们的表亲",
+        "action": "Click",
+        "next": [
+            "虫卡兹确定"
+        ]
+    },
+    "虫卡兹确定": {
+        "recognition": "OCR",
+        "expected": "确定这么做",
+        "action": "Click",
+        "next": [
+            "虫卡兹2"
+        ]
+    },
+    "虫卡兹2": {
+        "action": "Click",
+        "target": "虫卡兹",
+        "pre_delay": 20,
+        "post_delay": 20,
+        "next": [
+            "虫卡兹3"
+        ]
+    },
+    "虫卡兹3": {
+        "action": "Click",
+        "target": "虫卡兹",
+        "pre_delay": 20,
+        "next": [
+            "点击下一节点"
+        ]
+    },
+    "阴魂不散": {
+        "recognition": "OCR",
+        "expected": "阴魂不散",
+        "action": "Click",
+        "next": [
+            "阴魂不散1"
+        ]
+    },"阴魂不散1": {
+        "action": "Click",
+        "target": "阴魂不散",
+        "pre_delay": 20,
+        "post_delay": 20,
+        "next": [
+            "阴魂不散选项"
+        ]
+    },
+    "阴魂不散选项": {
+        "recognition": "OCR",
+        "expected": "多一事不如少一事",
+        "action": "Click",
+        "next": [
+            "阴魂不散确定"
+        ]
+    },
+    "阴魂不散确定": {
+        "recognition": "OCR",
+        "expected": "确定这么做",
+        "action": "Click",
+        "next": [
+            "阴魂不散2"
+        ]
+    },
+    "阴魂不散2": {
+        "action": "Click",
+        "target": "阴魂不散",
+        "pre_delay": 20,
+        "post_delay": 20,
+        "next": [
+            "阴魂不散3"
+        ]
+    },
+    "阴魂不散3": {
+        "action": "Click",
+        "target": "阴魂不散",
+        "pre_delay": 20,
+        "next": [
+            "点击下一节点"
+        ]
+    },
+    "点击商店": {
+        "recognition": "TemplateMatch",
+        "template": "商店图标.png",
+        "threshold": 0.97,
+        "action": "Click",
+        "next": [
+            "商店出发前往"
+        ]
+    },
+    "商店出发前往": {
+        "recognition": "OCR",
+        "expected": "出发前往",
+        "action": "Click",
+        "next": [
+            "点击余额"
+        ]
+    },
+    "点击余额": {
+        "recognition": "OCR",
+        "expected": "余额",
+        "action": "Click",
+        "next": [
+            "点击投资入口"
+        ]
+    },
+    "点击投资入口": {
+        "recognition": "OCR",
+        "expected": "投资入口",
+        "action": "Click",
+        "next": [
+            "确认投资1"
+        ]
+    },
+    "确认投资1":{
+        "action": "Click",
+        "target": [944,481,84,24],
+        "pre_delay": 20,
+        "post_delay": 20,
+        "next":[
+            "确认投资2"
+        ]
+    },
+    "确认投资2":{
+        "action": "Click",
+        "target": [944,481,84,24],
+        "pre_delay": 20,
+        "post_delay": 20,
+        "next":[
+            "确认投资3"
+        ]
+    },
+    "确认投资3":{
+        "action": "Click",
+        "target": [944,481,84,24],
+        "pre_delay": 20,
+        "post_delay": 20,
+        "next":[
+            "确认投资4"
+        ]
+    },
+    "确认投资4":{
+        "action": "Click",
+        "target": [944,481,84,24],
+        "pre_delay": 20,
+        "post_delay": 20,
+        "next":[
+            "确认投资5"
+        ]
+    },
+    "确认投资5":{
+        "action": "Click",
+        "target": [944,481,84,24],
+        "pre_delay": 20,
+        "post_delay": 20,
+        "next":[
+            "确认投资6"
+        ]
+    },
+    "确认投资6":{
+        "action": "Click",
+        "target": [944,481,84,24],
+        "pre_delay": 20,
+        "post_delay": 20,
+        "next":[
+            "投资受限",
+            "多谢光顾",
+            "已达上限"
+        ]
+    },
+    "投资受限": {
+        "recognition": "OCR",
+        "expected": "投资受限",
+        "action": "Click",
+        "pre_delay": 50,
+        "post_delay": 50,
+        "next": [
+            "点击返回主页"
+        ]
+    },
+    "多谢光顾": {
+        "recognition": "OCR",
+        "expected": "多谢光顾",
+        "pre_delay": 50,
+        "post_delay": 50,
+        "next": [
+            "确认投资1"
+        ]
+    },
+    "已达上限": {
+        "recognition": "OCR",
+        "expected": "已达上限"
+    },
+    "点击返回主页":{
+        "recognition": "TemplateMatch",
+        "template": "返回主页图标.png",
+        "threshold": 0.97,
+        "action": "Click",
+        "next": [
+            "放弃本次探索"
+        ]
+    },
+    "放弃本次探索": {
+        "recognition": "OCR",
+        "expected": "放弃本次探索",
+        "action": "Click",
+        "next": [
+            "确认放弃探索"
+        ]
+    },
+    "确认放弃探索":{
+        "recognition": "TemplateMatch",
+        "template": "确认放弃图标.png",
+        "threshold": 0.97,
+        "action": "Click",
+        "next": [
+            "结算1"
+        ]
+    },
+    "结算1":{
+        "action": "Click",
+        "target": [1236,36,1,1],
+        "next":[
+            "结算2"
+        ]
+    },
+    "结算2":{
+        "action": "Click",
+        "target": [640,654,1,1],
+        "next":[
+            "结算3"
+        ]
+    },
+    "结算3":{
+        "action": "Click",
+        "target": [640,654,1,1],
+        "next":[
+            "开始"
+        ]
+    }
+}
