@@ -1,16 +1,8 @@
 {
     "adb": {
-        "adb_path": "D:/Program Files/MuMuPlayer-12.0/shell/adb.exe",
+        "adb_path": "D:/Program Files/MuMuPlayer-12.0/shell/./adb.exe",
         "address": "127.0.0.1:16384",
-        "config": {
-            "extras": {
-                "mumu": {
-                    "enable": true,
-                    "index": 0,
-                    "path": "D:/Program Files/MuMuPlayer-12.0"
-                }
-            }
-        }
+        "config": {}
     },
     "controller": {
         "name": "安卓端",
@@ -20,11 +12,7 @@
     "task": [
         {
             "name": "萨卡兹存钱",
-            "option": [
-            ]
+            "option": []
         }
-    ],
-    "win32": {
-        "_placeholder": 0
-    }
+    ]
 }
