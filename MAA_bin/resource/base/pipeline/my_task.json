@@ -25,6 +25,28 @@
         "expected": "你确定要这么做",
         "action": "Click",
         "next": [
+            "选组合",
+            "选支援"
+        ]
+    },
+    "选支援": {
+        "recognition": "OCR",
+        "expected": "选择支援",
+        "next": [
+            "选支援1"
+        ]
+    },
+    "选支援1":{
+        "action": "Click",
+        "target": [640,600,1,1],
+        "next":[
+            "选支援2"
+        ]
+    },
+    "选支援2":{
+        "action": "Click",
+        "target": [640,600,1,1],
+        "next":[
             "选组合"
         ]
     },
