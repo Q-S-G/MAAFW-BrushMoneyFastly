@@ -47,6 +47,16 @@
         "action": "Click",
         "target": [640,600,1,1],
         "next":[
+            "选组合",
+            "关藏品"
+        ]
+    },
+    "关藏品": {
+        "recognition": "TemplateMatch",
+        "template": "关藏品图标.png",
+        "threshold": 0.95,
+        "action": "Click",
+        "next": [
             "选组合"
         ]
     },
