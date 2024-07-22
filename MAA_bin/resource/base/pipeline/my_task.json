@@ -2,7 +2,8 @@
     "萨卡兹存钱": {
         "next": [
             "开始",
-            "等待开始"
+            "等待开始",
+            "放弃本次探索"
         ]
     },
     "等待开始": {
@@ -214,6 +215,7 @@
         "recognition": "OCR",
         "expected": "刷新",
         "action": "Click",
+        "post_delay": 750,
         "next": [
             "刷新次数不足",
             "点击刷新确定"
@@ -230,11 +232,11 @@
         "recognition": "OCR",
         "expected": "确定",
         "action": "Click",
+        "post_delay": 1000,
         "next": [
             "构想数量不足",
             "发现不期而遇",
-            "发现战斗",
-            "发现紧急作战"
+            "发现战斗"
         ]
     },
     "构想数量不足": {
@@ -245,31 +247,22 @@
         ]
     },
     "发现不期而遇": {
-        "recognition": "TemplateMatch",
-        "roi": [0,0,640,720],
-        "template": "不期而遇图标.png",
-        "threshold": 0.97,
-        "post_delay": 20,
+        "recognition": "OCR",
+        "roi": [640,0,640,720],
+        "expected": "不期而遇",
         "next": [
             "点击出发前往"
         ]
     },
     "发现战斗": {
-        "recognition": "TemplateMatch",
-        "roi": [0,0,640,720],
-        "template": "战斗图标.png",
-        "threshold": 0.97,
-        "post_delay": 20,
-        "next": [
-            "点击刷新"
-        ]
-    },
-    "发现紧急作战": {
-        "recognition": "TemplateMatch",
-        "roi": [0,0,640,720],
-        "template": "紧急作战图标.png",
-        "threshold": 0.96,
-        "post_delay": 20,
+        "recognition": "OCR",
+        "roi": [640,0,640,720],
+        "expected": [
+            "公害",
+            "坏邻居",
+            "安全检查",
+            "夺路而跳"
+        ],
         "next": [
             "点击刷新"
         ]
@@ -322,7 +315,8 @@
             "高空坠物",
             "解惑",
             "虫卡兹",
-            "阴魂不散"
+            "阴魂不散",
+            "开始行动"
         ]
     },
     "相遇": {
@@ -620,6 +614,13 @@
             "点击下一节点"
         ]
     },
+    "开始行动":{
+        "recognition": "OCR",
+        "expected": "开始行动",
+        "next":[
+            "点击返回主页"
+        ]
+    },
     "点击商店": {
         "recognition": "TemplateMatch",
         "template": "商店图标.png",
@@ -755,6 +756,8 @@
         "threshold": 0.97,
         "action": "Click",
         "next": [
+            "开始",
+            "等待开始",
             "结算1"
         ]
     },
