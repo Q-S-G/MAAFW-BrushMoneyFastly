@@ -8,7 +8,6 @@
     "等待开始": {
         "recognition": "OCR",
         "expected": "正在清理思绪",
-        "action": "Click",
         "next": [
             "开始",
             "等待开始"
